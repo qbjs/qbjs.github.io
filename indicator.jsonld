@@ -1,0 +1,94 @@
+{
+	"@context" : {
+		"@base" : "http://qbjs.github.io/indicator.jsonld",
+		"qb" : "http://purl.org/linked-data/cube#",
+		"dc" : "http://purl.org/dc/terms/",
+		"cc" : "http://creativecommons.org/ns#",
+		"xsd" : "http://www.w3.org/2001/XMLSchema#",
+		"rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+		"sdmx-dimension" : "http://purl.org/linked-data/sdmx/2009/dimension#",
+		"sdmx-measure" : "http://purl.org/linked-data/sdmx/2009/measure#",
+		"sdmx-attribute" : "http://purl.org/linked-data/sdmx/2009/attribute#",
+		"property" : "http://worldbank.270a.info/property/",
+		"head" : {
+			"@id" : "rdfs:seeAlso"
+		},
+		"license" : {
+			"@id" : "cc:license",
+			"@type" : "@id"
+		},
+		"morePermissions" : {
+			"@id" : "cc:morePermissions",
+			"@type" : "@id"
+		},
+		"attributionName" : {
+			"@id" : "cc:attributionName"
+		},
+		"attributionURL" : {
+			"@id" : "cc:attributionURL",
+			"@type" : "@id"
+		},
+		"useGuidelines" : {
+			"@id" : "cc:useGuidelines",
+			"@type" : "@id"
+		},
+		"body" : {
+			"@reverse" : "qb:dataSet"
+		},
+		"area" : {
+			"@id" : "sdmx-dimension:refArea",
+			"@type" : "@id"
+		},
+		"year" : {
+			"@id" : "sdmx-dimension:refPeriod",
+			"@type" : "xsd:gYear"
+		},
+		"yearMonth" : {
+			"@id" : "sdmx-dimension:refPeriod",
+			"@type" : "xsd:gYearMonth"
+		},
+		"date" : {
+			"@id" : "sdmx-dimension:refPeriod",
+			"@type" : "xsd:date"
+		},
+		"indicator" : {
+			"@id" : "property:indicator",
+			"@type" : "@id"
+		},
+		"unit" : {
+			"@id" : "sdmx-attribute:unitMeasure"
+		},
+		"value" : {
+			"@id" : "sdmx-measure:obsValue"
+		},
+		"qb:structure" : {
+			"@type" : "@id"
+		},
+		"qb:measure" : {
+			"@type" : "@id"
+		},
+		"qb:dimension" : {
+			"@type" : "@id"
+		},
+		"qb:attribute" : {
+			"@type" : "@id"
+		}
+	},
+	"@id" : "#this",
+	"@type" : "qb:DataSet",
+	"qb:structure" : {
+		"@id" : "#structure",
+		"@type" : "qb:DataStructureDefinition",
+		"qb:component" : [ {
+			"qb:dimension" : "sdmx-dimension:refArea"
+		}, {
+			"qb:dimension" : "sdmx-dimension:refPeriod"
+		}, {
+			"qb:dimension" : "property:indicator"
+		}, {
+			"qb:measure" : "sdmx-measure:obsValue"
+		}, {
+			"qb:attribute" : "sdmx-attribute:unitMeasure"
+		} ]
+	}
+}

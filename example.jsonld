@@ -1,0 +1,29 @@
+{
+	"@context" : "http://qbjs.github.io/indicator.jsonld",
+	"@id" : "http://qbjs.github.io/indicator.jsonld#this",
+	"head" : {
+		"@id" : "",
+		"license" : "https://creativecommons.org/licenses/by/4.0/",
+		"attributionName" : "qbjs",
+		"attributionURL" : "https://github.com/qbjs/"
+	},
+	"body" : [ {
+		"indicator" : "http://worldbank.270a.info/classification/indicator/SP.POP.TOTL",
+		"area" : "http://geonames.jp/resource/北海道札幌市豊平区",
+		"year" : "1980",
+		"unit" : "人",
+		"value" : 218330
+	}, {
+		"indicator" : "http://worldbank.270a.info/classification/indicator/SP.POP.TOTL",
+		"area" : "http://geonames.jp/resource/北海道札幌市豊平区",
+		"year" : "1985",
+		"unit" : "人",
+		"value" : 249956
+	}, {
+		"indicator" : "http://worldbank.270a.info/classification/indicator/SP.POP.TOTL",
+		"area" : "http://geonames.jp/resource/北海道札幌市豊平区",
+		"year" : "1990",
+		"unit" : "人",
+		"value" : 277801
+	} ]
+}
