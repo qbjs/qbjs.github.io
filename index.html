@@ -1,47 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Qbjs.GitHub.io : RDF Data Cube by JSON-LD">
+    <title>Qbjs.GitHub.io by qbjs</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Qbjs.GitHub.io</title>
   </head>
-
   <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/qbjs">View On GitHub</a></li>
+        </nav>
+      </div><!-- end header -->
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/qbjs">View on GitHub</a>
+    <div class="wrapper">
 
-          <h1 id="project_title">Qbjs.GitHub.io</h1>
-          <h2 id="project_tagline">RDF Data Cube by JSON-LD</h2>
+      <section>
+        <div id="title">
+          <h1>Qbjs.GitHub.io</h1>
+          <p>RDF Data Cube by JSON-LD</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/qbjs">qbjs</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-        </header>
-    </div>
+        <p>qbjs.github.io nables you to publish statistical data based on <a href="http://www.w3.org/TR/vocab-data-cube/">W3C The RDF Data Cube Vocabulary</a> and <a href="http://json-ld.org/">JSON-LD</a> .  Reusable <a href="http://www.w3.org/TR/vocab-data-cube/#datasets">qb:DataSet</a> and <a href="http://www.w3.org/TR/json-ld/#the-context">JSON-LD Context</a> are provided.</p>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="qbjsgithubio" class="anchor" href="#qbjsgithubio" aria-hidden="true"><span class="octicon octicon-link"></span></a>qbjs.github.io</h1>
+<h1>
+<a id="model-1--indicator" class="anchor" href="#model-1--indicator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model 1 : indicator</h1>
 
-<p>RDF Data Cube by JSON-LD</p>
+<p>Indicator.jsonld is designed to store statistical data with 1 measure (value) , 3 dimension (indicator, area, time) and optional attribute (unit) .</p>
+
+<p><a href="http://qbjs.github.io/indicator.jsonld">http://qbjs.github.io/indicator.jsonld</a> includes :</p>
+
+<ul>
+<li>JSON-LD Context</li>
+<li>Instance of qb:DataStrctureDefinition</li>
+<li>Instance of qb:DataSet</li>
+</ul>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>example</h2>
+
+<p><a href="http://qbjs.github.io/example.jsonld">http://qbjs.github.io/example.jsonld</a></p>
+
+<pre><code>{
+    "@context" : "http://qbjs.github.io/indicator.jsonld",
+    "@id" : "http://qbjs.github.io/indicator.jsonld#this",  
+    "head" : {
+        "@id" : "",
+        "license" : "https://creativecommons.org/licenses/by/4.0/",
+        "attributionName" : "qbjs",
+        "attributionURL" : "https://github.com/qbjs/"
+    },
+    "body" : [ {
+        "indicator" : "http://worldbank.270a.info/classification/indicator/SP.POP.TOTL",
+        "area" : "http://geonames.jp/resource/北海道札幌市豊平区",
+        "year" : "1980",
+        "unit" : "人",
+        "value" : 218330
+    }, {
+        "indicator" : "http://worldbank.270a.info/classification/indicator/SP.POP.TOTL",
+        "area" : "http://geonames.jp/resource/北海道札幌市豊平区",
+        "year" : "1985",
+        "unit" : "人",
+        "value" : 249956
+    }, {
+        "indicator" : "http://worldbank.270a.info/classification/indicator/SP.POP.TOTL",
+        "area" : "http://geonames.jp/resource/北海道札幌市豊平区",
+        "year" : "1990",
+        "unit" : "人",
+        "value" : 277801
+    } ]
+}
+</code></pre>
+
+<h2>
+<a id="structure" class="anchor" href="#structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>structure</h2>
+
+<pre><code>{
+    // required: reference to JSON-LD Context 
+    "@context" : "http://qbjs.github.io/indicator.jsonld",
+
+    // required: reference to qb:DataSet instance
+    "@id" : "http://qbjs.github.io/indicator.jsonld#this",
+
+    // optional: meta data place holder
+    "head" : {
+        // required: "" means this JSON-LD url
+        "@id" : "",
+        // put your meta data here
+    },
+
+    // required: main data place holder
+    "body" : [ 
+        // put your data here
+    ]
+}
+</code></pre>
+
+<h2>
+<a id="property" class="anchor" href="#property" aria-hidden="true"><span class="octicon octicon-link"></span></a>property</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>indicator</td>
+<td>indicator URL</td>
+<td>"<a href="http://worldbank.270a.info/classification/indicator/SP.POP.TOTL">http://worldbank.270a.info/classification/indicator/SP.POP.TOTL</a>"</td>
+</tr>
+<tr>
+<td>area</td>
+<td>area URL</td>
+<td>"<a href="http://geonames.jp/resource/%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E8%B1%8A%E5%B9%B3%E5%8C%BA">http://geonames.jp/resource/北海道札幌市豊平区</a>"</td>
+</tr>
+<tr>
+<td>year</td>
+<td>year String (#1)</td>
+<td>"2012"</td>
+</tr>
+<tr>
+<td>yearMonth</td>
+<td>year-month String (#1)</td>
+<td>"2012-01"</td>
+</tr>
+<tr>
+<td>date</td>
+<td>date String (#1)</td>
+<td>"2012-01-31"</td>
+</tr>
+<tr>
+<td>unit</td>
+<td>Unit String (optional)</td>
+<td>"人"</td>
+</tr>
+<tr>
+<td>value</td>
+<td>main value, data type is not specified</td>
+<td>277801</td>
+</tr>
+</tbody>
+</table>
+
+<p>Note #1 : one of them is required</p>
+
+<h1>
+<a id="other-models" class="anchor" href="#other-models" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other models</h1>
+
+<p>ToDo</p>
       </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
     </div>
-
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
-
   </body>
 </html>
