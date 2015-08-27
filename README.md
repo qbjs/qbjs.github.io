@@ -1,10 +1,8 @@
-# qbjs.github.io
-
 qbjs.github.io nables you to publish statistical data based on [W3C The RDF Data Cube Vocabulary](http://www.w3.org/TR/vocab-data-cube/) and [JSON-LD](http://json-ld.org/) .  Reusable [qb:DataSet](http://www.w3.org/TR/vocab-data-cube/#datasets) and [JSON-LD Context](http://www.w3.org/TR/json-ld/#the-context) are provided.
 
-# indicator.jsonld
+# Model 1 : indicator
 
-Indicator.jsonld is designed to store statistical data with 3 dimension (indicator, area, time) and 1 measure (value).
+Indicator.jsonld is designed to store statistical data with 1 measure (value) , 3 dimension (indicator, area, time) and optional attribute (unit) .
 
 <http://qbjs.github.io/indicator.jsonld> includes :
 
@@ -24,7 +22,7 @@ Indicator.jsonld is designed to store statistical data with 3 dimension (indicat
 			"@id" : "",
 			"license" : "https://creativecommons.org/licenses/by/4.0/",
 			"attributionName" : "qbjs",
-			"at	tributionURL" : "https://github.com/qbjs/"
+			"attributionURL" : "https://github.com/qbjs/"
 		},
 		"body" : [ {
 			"indicator" : "http://worldbank.270a.info/classification/indicator/SP.POP.TOTL",
@@ -48,7 +46,7 @@ Indicator.jsonld is designed to store statistical data with 3 dimension (indicat
 	}
 
 
-## Structure
+## structure
 
 	{
 		// required: reference to JSON-LD Context 
@@ -70,7 +68,7 @@ Indicator.jsonld is designed to store statistical data with 3 dimension (indicat
 		]
 	}
 
-## Property
+## property
 
 
 Name      | Description                             | Sample
@@ -85,3 +83,6 @@ value     | main value, data type is not specified  | 277801
 
 Note #1 : one of them is required
 
+# Other models
+
+ToDo
